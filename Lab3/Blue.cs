@@ -54,15 +54,18 @@ namespace Lab3
             // code here
             for (int i = 0; i < n; i++)
             {
-                bool hasBad = false;
-                for (int j = 0; j < 4; j++)
+                int m1 = int.Parse(Console.ReadLine());
+                int m2 = int.Parse(Console.ReadLine());
+                int m3 = int.Parse(Console.ReadLine());
+                int m4 = int.Parse(Console.ReadLine());
+
+                if (m1 != 2 && m1 != 3 &&
+                    m2 != 2 && m2 != 3 &&
+                    m3 != 2 && m3 != 3 &&
+                    m4 != 2 && m4 != 3)
                 {
-                    int mark = int.Parse(Console.ReadLine());
-                    if (mark == 2 || mark == 3)
-                        hasBad = true;
-                }
-                if (!hasBad)
                     count++;
+                }
             }
             // end
 
