@@ -42,19 +42,23 @@ namespace Lab3
             int count = 0;
 
             // code here
-            for (int i = 0; i < n; i++)
-            {
-                bool bad = false;
-                for (int j = 0; j < 4; j++)
-                {
-                    int mark = int.Parse(Console.ReadLine());
-                    if (mark == 2 || mark == 3)
-                        bad = true;
-                }
-                if (!bad) count++;
-            }
-            // end
+            bool bad = false;
 
+            for (int i = 1; i <= n * 4; i++)
+            {
+                int mark = int.Parse(Console.ReadLine());
+
+                if (mark == 2 || mark == 3)
+                    bad = true;
+
+                if (i % 4 == 0)
+                {
+                    if (!bad)
+                        count++;
+
+                    bad = false;
+                }
+            }
             return count;
         }
         public (int tasks, int serias) Task4(int time, int tasks)
