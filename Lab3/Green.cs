@@ -11,10 +11,10 @@
 
             for (int i = 0; i < n; i++)
             {
-                string[] inputs = Console.ReadLine().Split(' ');
-                double x = double.Parse(inputs[0]);
+             
+                double x = Convert.ToDouble(Console.ReadLine());
 
-                double y = double.Parse(inputs[1]);
+                double y = Convert.ToDouble(Console.ReadLine());
                 if ((x - a) * (x - a) + (y - b) * (y - b) <= r * r)
                 {
                     count++;
